@@ -1,26 +1,198 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <router-view />
+  </div>
 </template>
+<style >
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
   }
-}
-</script>
+  
+  main{
+    width: 100%;
+    background-image: linear-gradient( 115deg, rgba(0, 35, 115, 0.8), rgba(65, 18, 117, 0.7)), url("https://images.unsplash.com/photo-1484807352052-23338990c6c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .form{
+    background: linear-gradient( 115deg, rgba(0, 25, 82, 0.8), rgba(32, 4, 64, 0.7));
+    margin: 0 auto;
+    width: 80%;
+  }
+  @media only screen and (max-width: 1200px) {
+    .form {
+      width: 80%;
+    }
+  }
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  @media only screen and (max-width: 991px) {
+    .form {
+      background: none;
+    }
+  }
+
+  @media only screen and (max-width: 560px) {
+    #name, #email, #number, #dropdown, #message,#last-name {
+        width: auto !important;
+    }
+    #submit{
+        width: 100% !important;
+    }
+    #table{
+        width: 100% !important;
+    }
+  }
+
+
+  .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    flex-direction: column;
+    padding: 50px 0 20px 0;
+  }
+  #title{
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+  }
+  #description{
+    font-style: italic;
+    padding: 5px;
+  }
+  #survey-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    margin: 0 auto;
+    width: 50%;
+  }
+  .uno{
+    padding: 10px;
+  }
+  /* #name, #email, #number, #dropdown, #submit, #table,#last-name,#date,#input-image{
+    width: 60%;
+    height: 40px;
+    font-size: 1rem;
+    border: transparent;
+    border-radius: 5px;
+    padding-left: 5px;
+    outline: none;
+  } */
+ 
+  #message{
+    width: 60%;
+    height: 100px;
+    font-size: 1rem;
+    border: transparent;
+    border-radius: 5px;
+    padding-left: 5px;
+  }
+  .submit {
+    margin: 20px;
+  }
+
+  .input-form{
+      height: auto;
+      padding: 0;
+      border: 0;
+  }
+
+  .input-group>.custom-select:not(:last-child), .input-group>.form-control:not(:last-child) {
+    border-top-right-radius: 0.25rem; 
+    border-bottom-right-radius: 0.25rem; 
 }
+
+.glyphicon img{
+  right: 0;
+  position: absolute;
+  z-index: 3;
+  width: 30px;
+  height: 30px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tabel-info td, .tabel-info th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  color: white;
+}
+#tabel img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+#output{
+  overflow-x: auto;
+}
+.alert{
+  background: #79c879;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  
+}
+
+#myInput {
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 60%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  border-radius: 5px;
+}
+
+#tabel td{
+  text-align: center; 
+  vertical-align: middle;
+}
+.table-users th{
+  cursor:pointer;
+}
+
+.table-users .th-sort-asc::after {
+  content: "\25b4";
+}
+
+.table-users .th-sort-desc::after {
+  content: "\25be";
+}
+
+.table-users .th-sort-asc::after,
+.table-users .th-sort-desc::after {
+  margin-left: 5px;
+}
+
+.table-users .th-sort-asc,
+.table-users .th-sort-desc {
+  background: rgba(0, 0, 0, 0.1);
+}
+.input-group{
+  width: 60%;
+}
+
+.form-control{
+  width: 60%;
+}
+#tabel th{
+  text-align: center;
+}
+
 </style>
