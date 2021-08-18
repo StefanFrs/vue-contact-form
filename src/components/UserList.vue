@@ -39,6 +39,7 @@ import { useLoadUsers, deleteUser } from '@/firebase'
 
 export default {
   setup() {
+    //return array of users from firebase store
     const users = useLoadUsers()
     return { users, deleteUser }
   }

@@ -41,3 +41,26 @@ export const useLoadUsers = () => {
   onUnmounted(close)
   return users
 }
+
+
+//format image to base64 string
+
+// function encodeImageFileAsURL() {
+//   const file = document.querySelector("input[type=file]").files[0];
+//   const reader = new FileReader();
+
+//   reader.addEventListener(
+//     "load",
+//     function () {
+//       imgUrl = reader.result;
+//     },
+//     false
+//   );
+
+//   if (file) {
+//     reader.readAsDataURL(file);
+//   }
+// }
+// document
+//   .getElementById("customFile")
+//   .addEventListener("change", encodeImageFileAsURL, false);
